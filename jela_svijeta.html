@@ -18,7 +18,7 @@
     <div class="step-container">
         <div class="menu">
           <div class="step-1">
-            <p>1.Korak: Unesite podatke po kojima želite pretražiti.</p>
+            <p>1.Korak: Unesite podatke po kojima želite pretražiti bazu jela svijeta.</p>
           </div>
           <div class="step-2">
             <p>2.Korak: Nakon unešenih podataka pritsnite gumb "Prikaži".</p>
@@ -29,15 +29,15 @@
       <form class="speaker-form" action="prikaz_podataka_jela_svijeta.php" method="post">
         <div class="form-row">
           <label for="category">Kategorija</label>
-          <input id="category" name="category" type="text">
+          <input id="category" name="category" type="text" required>
         </div>
         <div class="form-row">
           <label for="ingredient">Sastojak</label>
-          <input id="ingredient" name="ingredient" type="text">
+          <input id="ingredient" name="ingredient" type="text" required>
         </div>
         <div class="form-row">
           <label for="tag">Tag</label>
-          <input id="tag" name="tag" type="text">
+          <input id="tag" name="tag" type="text" required>
         </div>
         <div class="form-row">
           <button>Prikaži</button>

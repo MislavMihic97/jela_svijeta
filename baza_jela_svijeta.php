@@ -15,20 +15,23 @@
       mysqli_select_db($db, 'meals_of_the_world') or die (mysqli_error($db));
 
       $query2 = 'CREATE TABLE meals (
-      id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+      mealsID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
       title VARCHAR(60) NOT NULL,
       description VARCHAR(60) NOT NULL,
       status VARCHAR(60) DEFAULT 'created',
       categoryID INTEGER,
-      tagID INTEGER,
-      ingredientID INTEGER,
-      PRIMARY KEY (id)
+      tagsID INTEGER,
+      ingredientsID INTEGER,
+      PRIMARY KEY (id),
+      FOREIGN KEY (categoryID),
+      FOREIGN KEY (tagsID),
+      FOREIGN KEY (ingredientsID)
       )
       ENGINE = MyISAM';
       mysqli_query($db, $query2) or die (mysqli_error($db));
 
       $query3 = 'CREATE TABLE category (
-      id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+      categoryID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
       title VARCHAR(60) NOT NULL,
       slug VARCHAR(60) NOT NULL,
       PRIMARY KEY (id),
@@ -38,7 +41,7 @@
       mysqli_query($db, $query3) or die (mysqli_error($db));
 
       $query4 = 'CREATE TABLE tags (
-      id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+      tagsID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
       title VARCHAR(60) NOT NULL,
       slug VARCHAR(60) NOT NULL,
       PRIMARY KEY (id),
@@ -48,7 +51,7 @@
       mysqli_query($db, $query4) or die (mysqli_error($db));
 
       $query5 = 'CREATE TABLE ingredients (
-      id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+      ingredientsID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
       title VARCHAR(60) NOT NULL,
       slug VARCHAR(60) NOT NULL,
       PRIMARY KEY (id),
@@ -60,6 +63,7 @@
       $query6 = 'CREATE TABLE languages (
       id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
       title VARCHAR(60) NOT NULL,
+      lang VARCHAR(60) NOT NULL,
       PRIMARY KEY (id)
       )
       ENGINE = MyISAM';
