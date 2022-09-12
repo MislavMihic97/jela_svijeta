@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Meals of the world</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stil.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="menu-container">
+          <div class="title">Meals of the world</div>
+        </div>
+      </nav>
+    </header>
+    <div class="step-container">
+        <div class="menu">
+          <div class="step-1">
+            <p>1.Korak: Unesite podatke po kojima želite pretražiti.</p>
+          </div>
+          <div class="step-2">
+            <p>2.Korak: Nakon unešenih podataka pritsnite gumb "Prikaži".</p>
+          </div>
+        </div>
+    </div>
+    <section>
+      <form class="speaker-form" action="prikaz_podataka_jela_svijeta.php" method="post">
+        <div class="form-row">
+          <label for="category">Kategorija</label>
+          <input id="category" name="category" type="text">
+        </div>
+        <div class="form-row">
+          <label for="ingredient">Sastojak</label>
+          <input id="ingredient" name="ingredient" type="text">
+        </div>
+        <div class="form-row">
+          <label for="tag">Tag</label>
+          <input id="tag" name="tag" type="text">
+        </div>
+        <div class="form-row">
+          <button>Prikaži</button>
+        </div>
+      </form>
+    </section>
+    <footer>
+          <div>
+            <a class="mail" href="MailTo:mislav.mihic1997@gmail.com"><span class="fa fa-envelope"></span>mislav.mihic1997@gmail.com</a>
+            <span class="fa fa-clock-o" id="currentTime"></span>
+          </div>
+    </footer>
+    <script src="skripta.js"></script>
+  </body>
+</html>
