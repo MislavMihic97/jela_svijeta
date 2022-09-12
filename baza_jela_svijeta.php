@@ -2,7 +2,7 @@
 <html lang="hr">
   <head>
     <meta charset="UTF-8">
-    <title>Meals of the world database</title>
+    <title>Baza podataka jela svijeta</title>
   </head>
   <body>
     <?php
@@ -19,6 +19,9 @@
       title VARCHAR(60) NOT NULL,
       description VARCHAR(60) NOT NULL,
       status VARCHAR(60) DEFAULT 'created',
+      categoryID INTEGER,
+      tagID INTEGER,
+      ingredientID INTEGER,
       PRIMARY KEY (id)
       )
       ENGINE = MyISAM';
